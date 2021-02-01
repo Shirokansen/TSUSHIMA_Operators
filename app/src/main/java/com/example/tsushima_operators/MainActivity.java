@@ -17,33 +17,44 @@ public class MainActivity extends AppCompatActivity {
         TextView display;
         display = findViewById(R.id.displayText);
 
-        //Arithmetic operators
-        //Assignment operators
-        //Logical operators
-        //Comparison operators
 
-        //Addition
-        //Subtraction
-        //Multiplication
-        //Division
-        //Modulo (Division Operation Remainder)
+        int birthYear =2002;
+        int birthMonth =8;
+        int birthday =12;
 
-        double x =0;
-        //A double variable named x has been assigned a value of zero
-        double y =0;
+        int currentYear= 20201;
+        int currentMonth = 1;
+        int currentDay = 26;
 
-        x= 7;
-        y= 3;
+        int ageInYears, ageInMonths,ageInDays;
 
-        display.setText(
-                "The value between"+
-                String.valueOf( x )+
-                " and "+
-                String.valueOf( y )+
-                " \nin a modulo operation "+
-                " is "+
-                String.valueOf( x % y ));
-        //Concatenation
+        if(birthMonth > currentMonth) {
+            currentMonth += 12;
+            currentYear -= 1;
+        }
+
+        if(birthday > currentDay) {
+            currentDay += 30;
+            currentYear -= 1;
+        }
+
+        ageInYears = currentYear - birthYear;
+        ageInMonths = currentMonth - birthMonth;
+        ageInDays = currentDay - birthday;
+
+
+            display.setText("My Precise age is\n"+
+                    String.valueOf(ageInYears)+
+                    " Years, \n"+
+                    String.valueOf(ageInMonths)+
+                    " Months, \n"+
+                    String.valueOf(ageInDays)+
+                    " Days, ");
+        }
+
+
+
+
 
     }
 }
